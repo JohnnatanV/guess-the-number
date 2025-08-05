@@ -5,6 +5,7 @@ import { setupCounter } from './counter.ts'
 
 const print = (): void => {
   console.log("Hello!")
+  console.log("Papaya!!!")
 }
 
 print()
