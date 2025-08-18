@@ -1,6 +1,6 @@
 import "./style.css";
 
-const app = document.getElementById('app')
+// const app = document.getElementById('app')
 
 function startGame(player: string, level: number) {
   console.log(`Starting game for ${player} at level ${level}`);
@@ -17,21 +17,21 @@ const menu = [
   { name: "Veggie", price: 9 },
 ]
 
-const cashInRegister = 100
-const orderQueue = []
+// const cashInRegister = 100
+// const orderQueue = []
 
 /**
  * Challenge: Add a utility function "addNewPizza"
  * that takes a pizza object and adds it to the menu
  */
 
-const addNewPizzaOpt = (pizzaObj: { name: string, price: number }) => { menu.push(pizzaObj) }
+const addNewPizza = (pizzaObj: { name: string, price: number }) => { menu.push(pizzaObj) }
 
-function addNewPizza(name: string, price: number) {
+/*function addNewPizza(name: string, price: number) {
   menu.push({ name, price })
-}
+}*/
 
-addNewPizza("Double Chesse", 8)
+addNewPizza({ name: "Double Chesse", price: 8 })
 
 console.log(menu)
 
