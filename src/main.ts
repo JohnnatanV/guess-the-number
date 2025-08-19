@@ -1,6 +1,6 @@
 import "./style.css";
 
-// const app = document.getElementById('app')
+const app = document.getElementById("app");
 
 function startGame(player: string, level: number) {
   console.log(`Starting game for ${player} at level ${level}`);
@@ -10,12 +10,22 @@ function startGame(player: string, level: number) {
 startGame("Player1", 1);
 // Additional game setup can be added here
 
+if (app) {
+  app.innerHTML = `
+  <div class="typewriter">
+    <div>
+      <p>Guess the Number Game</p>
+    </div>
+  </div>
+  `;
+}
+
 const menu = [
   { name: "Margherita", price: 8 },
   { name: "Pepperoni", price: 10 },
   { name: "Hawaiian", price: 10 },
   { name: "Veggie", price: 9 },
-]
+];
 
 // const cashInRegister = 100
 // const orderQueue = []
@@ -25,14 +35,14 @@ const menu = [
  * that takes a pizza object and adds it to the menu
  */
 
-const addNewPizza = (pizzaObj: { name: string, price: number }) => { menu.push(pizzaObj) }
+const addNewPizza = (pizzaObj: { name: string; price: number }) => {
+  menu.push(pizzaObj);
+};
 
 /*function addNewPizza(name: string, price: number) {
   menu.push({ name, price })
 }*/
 
-addNewPizza({ name: "Double Chesse", price: 8 })
+addNewPizza({ name: "Double Chesse", price: 8 });
 
-console.log(menu)
-
-
+console.log(menu);
